@@ -26,10 +26,10 @@ export default function ContactList() {
       ) : (
         <ul className={s.list}>
           {data &&
-            filteredContacts.map(({ id, name, phone }) => (
+            filteredContacts.map(({ id, name, number }) => (
               <li className={s.item} key={id}>
                 <span>{name}: </span>
-                <span>{phone}</span>
+                <span>{number}</span>
                 <button className={s.btn} onClick={() => deleteContact(id)}>
                   delete
                 </button>
